@@ -1,0 +1,250 @@
+:root{
+    --maincolor:#e5e5e5;
+    --secondarycolor:#fefefe;
+
+    --mainText:black;
+    --secondaryText:#4b5156;
+
+    --border:#c1c1c1;
+    --link: #17a2b8;
+
+    --themeDotBorder: #24292e;
+
+        
+    --terminalText: #ced1d4;
+    --terminalTextSecondary: #4a916e;
+    --terminalTextThird: #273b6e;
+    --terminal-nav: #222222;
+    --terminal-body: #8a8a87;
+}
+
+html, body{
+    padding: 0;
+    margin: 0;
+}
+
+.ttext-white{
+    color: var(--terminalText);
+    font-weight: initial;
+}
+
+.ttext-green{
+    color: var(--terminalTextSecondary);
+}
+
+.ttext-blue{
+    color: var(--terminalTextThird);
+}
+
+h1, h2, h3, h4, h5, h6, strong{
+    color: var(--mainText);
+    font-family: 'Russo One', sans-serif;
+    font-weight: 500;
+}
+
+p, li, span, label, input, textarea{
+    color: var(--secondaryText);
+    font-family: 'Roboto Mono', monospace;
+}
+
+a{
+    text-decoration: none;
+    color: var(--link);
+}
+
+ul{
+    list-style: none;
+}
+
+h1{ font-size: 56px;}
+h2{ font-size: 36px;}
+h3{ font-size: 28px;}
+h4{ font-size: 24px;}
+h5{ font-size: 20px;}
+h6{ font-size: 16px;}
+
+
+.s1{
+    background-color: var(--maincolor);
+    border-bottom: 1px solid var(--border);
+    overflow: auto;
+}
+
+.s2{
+    background-color: var(--secondarycolor);
+    border-bottom: 1px solid var(--border);
+    overflow: auto;
+}
+
+
+.greeting-wrapper{
+	display: grid;
+	text-align: center;
+	align-content: center;
+	min-height: 3em;
+
+}
+
+.main-container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.intro-wrapper{
+    background-color:var(--secondarycolor);
+    border-bottom: 0.1px solid #25111f;
+    border-radius: 5px 5px 0 0;
+
+    /* generated with https://cssgenerator.org/box-shadow-css-generator.html */
+    box-shadow: -3px 0px 7px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -3px 0px 7px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -3px 0px 7px 0px rgba(0,0,0,0.75);
+    color: var(--terminalText);
+    font-family: monospace;
+    font-weight: bold;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    'nav-wrapper nav-wrapper'
+    'left-col right-col'
+    ;
+}
+
+.nav-wrapper{
+    grid-area: nav-wrapper;
+    border-bottom: 0.1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px 5px 0 0;
+    background-color: var(--maincolor);
+    padding-right: 2em;
+    padding-left: 4em;
+
+}
+
+.dots-wrapper{
+	display: flex;
+	padding: 10px;
+}
+
+#dot-1{
+	background-color:  #807f79;
+}
+
+#dot-2{
+	background-color:  #807f79;
+}
+
+#dot-3{
+	background-color:  #e55d2f;
+}
+
+.browser-dot{
+	background-color: black;
+	height: 15px;
+	width: 15px;
+	border-radius: 50%;
+	margin: 5px;
+    text-align: center;
+    font-size: small;
+
+	-webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+	-moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+	box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+
+}
+
+.left-col{
+    grid-area: left-col;
+    padding-top:50px;
+	padding-bottom: 50px;
+}
+
+.right-col{
+    grid-area: right-col;
+    padding-top:50px;
+}
+
+#settings-note{
+    font-size: 18px;
+    font-style: italic;
+    text-align: center;
+}
+
+.term-icons{
+    width: 8em;
+}
+
+#profile-pic{
+    display: block;
+	margin:0 auto;
+
+	height: 200px;
+	width: 200px;
+	object-fit: cover;
+	border:2px solid var(--border);
+}
+
+#theme-options-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.theme-dot{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+
+    margin: 5px;
+    border: 2px solid var(--themeDotBorder);
+
+    -webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+	-moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+	box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+
+    cursor: pointer;
+}
+
+.theme-dot:hover{
+    border-width: 3px;
+    height: 28px;
+    width: 28px;
+}
+
+
+#light-mode{
+    background-color: #fff;
+}
+#light-mode:hover{
+    border-color: #192734;
+}
+
+#dark-mode{
+    background-color: #192734;
+}
+#dark-mode:hover{
+    border-color: #fff;
+}
+
+@media screen and (max-width: 1200px){
+    .main-container{
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .intro-wrapper{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        'nav-wrapper'
+        'left-col'
+        'right-col'
+        ;
+    }
+    .intro-text-wrapper{
+        margin: 0 auto;
+        width: 80%;
+    }
+}
