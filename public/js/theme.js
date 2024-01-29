@@ -9,14 +9,13 @@ for(let themeDot of themeDots){
     })
 }
 
-
 const setTheme = (mode)=>{
     switch (mode) {
         case 'dark':
-            themeLink.href = 'dark.css'
+            themeLink.href = '/css/dark.css'
             break;
         case 'purple':
-            themeLink.href = 'purple.css'
+            themeLink.href = '/css/purple.css'
             break;
         default:
             themeLink.href = ''
