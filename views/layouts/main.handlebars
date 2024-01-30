@@ -5,20 +5,25 @@
         <meta name="viewport" contents="width=device-width, initial-scale=1, minimum-scale=1"/>
         
         <link rel="stylesheet" type="text/css" href="/css/main.css">
-        <link id="theme-style" rel="stylesheet" href="">
+        <!--link id="theme-style" type="stylesheet" href=""-->
 
         <script>
+            const link = document.createElement('link');
+            link.setAttribute('rel', 'stylesheet');
+            link.setAttribute('id', 'theme-style');
             switch (localStorage.getItem('theme')) {
                 case 'dark':
-                    document.getElementById("theme-style").href = 'dark.css'
+                    link.setAttribute('href', '/css/dark.css')
                     break;
                 case 'purple':
-                    document.getElementById("theme-style").href = 'purple.css'
+                    link.setAttribute('href', '/css/purple.css')
                     break;
                 default:
-                    document.getElementById("theme-style").href = ''
+                    link.href = ''
                     break;
             }
+
+            document.head.appendChild(link);
         </script>
 
 
