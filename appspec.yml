@@ -1,9 +1,10 @@
 version: 0.0
 os: linux
 files:
-  - source: .
+  - source: /
     destination: /home/ec2-user/portfolio/
     overwrite: true
+file_exists_behavior: OVERWRITE
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies.sh
