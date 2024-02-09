@@ -4,9 +4,6 @@ const displayIntroMessage = async (introTextNode, marker, t1, t2) => {
     if(!introTextNode) return
 
     let cText = marker
-
-    console.log("Inside displayIntroMessage:", introTextNode);
-
     
     for(const c of t1){
         await sleep(100)

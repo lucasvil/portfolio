@@ -22,12 +22,8 @@ describe('displayIntroMessage function', () => {
         let t2 = "I'm Lucas Villarroel"
 
         introTextNode.innerText = ''
-        console.log("Before calling displayIntroMessage:", introTextNode);
 
         await displayIntroMessage(introTextNode, marker,  t1, t2);
-
-        console.log("After calling displayIntroMessage:", introTextNode);
-
 
         expect(introTextNode.innerText).toBe(t1 + t2 + marker);
     });
