@@ -27,18 +27,18 @@ describe('setTheme function', () => {
     expect(mockSetItem).toHaveBeenCalledWith('theme', 'dark');
   });
 
-  test('should set the theme to purple', () => {
-    setTheme('purple', themeLink);
+  test('should set the theme to light', () => {
+    setTheme('light', themeLink);
 
-    expect(themeLink.getAttribute('href')).toBe('/css/purple.css');
+    expect(themeLink.getAttribute('href')).toBe('/css/light.css');
     expect(mockSetItem).toHaveBeenCalledTimes(1);
-    expect(mockSetItem).toHaveBeenCalledWith('theme', 'purple');
+    expect(mockSetItem).toHaveBeenCalledWith('theme', 'light');
   });
 
-  test('should reset the theme', () => {
+  test('should be dark by default', () => {
     setTheme('invalid', themeLink);
 
-    expect(themeLink.getAttribute('href')).toBe('');
+    expect(themeLink.getAttribute('href')).toBe('/css/dark.css');
     expect(mockSetItem).toHaveBeenCalledTimes(1);
     expect(mockSetItem).toHaveBeenCalledWith('theme', 'invalid');
   });
