@@ -26,7 +26,8 @@
                     <div data-mode="light" id="light-mode" class="theme-dot"></div>
                     <div data-mode="dark" id="dark-mode" class="theme-dot"></div>
                 </div>
-                <p id="settings-note" style="text-align: center;line-height: 0;">Select Theme^</p>
+                <p class="settings-note">^</p>
+                <p class="settings-note">Select Theme</p>
             </div>
             <div class="right-col">
                 <div class="intro-text-wrapper">
@@ -133,7 +134,7 @@
         }
     })
 
-    displayIntroMessage(document.getElementById("intro-text"),"_", "Hi,\n", "I'm Lucas Villarroel").then(() => {
+    displayIntroMessage(document.getElementById("intro-text"),"_", "Hi, ", "I'm Lucas Villarroel").then(() => {
         textMarker(document.getElementById("intro-text"))
     })
 </script>
