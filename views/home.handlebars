@@ -3,30 +3,35 @@
         <div class="intro-wrapper">
             <div class="nav-wrapper">
                 <div id="nav-term-left">
+                        <div class="dots-wrapper">
+                        <div id="dot-1" class="browser-dot"></div>
+                        <div id="dot-2" class="browser-dot"></div>
+                        <div id="dot-3" class="browser-dot"></div>
+                    </div>
                 </div>
                 <div id="nav-term-mid">
-                    <span>lucasvil@portfolio:~</span>
+                    <p>lucasvil@portfolio:~</p>
                 </div>
                 <div id="nav-term-right">
                     <div class="dots-wrapper">
-                        <div id="dot-1" class="browser-dot">-</div>
-                        <div id="dot-2" class="browser-dot">□</div>
-                        <div id="dot-3" class="browser-dot">x</div>
+                        <div id="dot-1" class="browser-dot"><i class="fa-solid fa-minus fa-xs"></i></div>
+                        <div id="dot-2" class="browser-dot"><i class="fa-regular fa-square dot-icon fa-sm"></i></div>
+                        <div id="dot-3" class="browser-dot"><i class="fa-solid fa-xmark dot-icon"></i></div>
                     </div>
                 </div>
             </div>
             <div class="left-col">
-                <img id="profile-pic" src="./img/lucas_square.jpg" alt="">
+                <img id="profile-pic" src="./img/lucas_circle_b.png" alt="">
                 <div id="theme-options-wrapper">
                     <div data-mode="light" id="light-mode" class="theme-dot"></div>
                     <div data-mode="dark" id="dark-mode" class="theme-dot"></div>
-                    <div data-mode="purple" id="purple-mode" class="theme-dot"></div>
                 </div>
-                <p id="settings-note" style="text-align: center;line-height: 0;">Select Theme^</p>
+                <p class="settings-note">^</p>
+                <p class="settings-note">Select Theme</p>
             </div>
             <div class="right-col">
                 <div class="intro-text-wrapper">
-                    <h1 id="intro-text">_</h1>
+                    <h2 id="intro-text"></h2>
                 </div>
             </div>
         </div>
@@ -81,7 +86,7 @@
                         <h6 class="post-title">Houseplant Monitoring System</h6>
                         <p class="post-intro">A houseplant monitoring system consisting of a Raspberry Pi, sensors and a
                             web interface.</p>
-                        <a href="/houseplant">Read More</a>
+                        <a class="link" href="/houseplant">Read More</a>
                     </div>
                 </div>
             </div>
@@ -93,7 +98,7 @@
                         <h6 class="post-title">Development Environment for the Meta Attack Language (MAL)</h6>
                         <p class="post-intro">A Language Server using the Language Server Protocol (LSP) coupled with a
                             VSCode extension.</p>
-                        <a href="/lsp">Read More</a>
+                        <a class="link" href="/lsp">Read More</a>
                     </div>
                 </div>
             </div>
@@ -105,7 +110,7 @@
                         <h6 class="post-title">This Website</h6>
                         <p class="post-intro">Frontend developed using pure JavaScript with an ExpressJS backend.
                             Deployed using AWS Elastic Compute Cloud (ec2).</p>
-                        <a href="/portfolio">Read More</a>
+                        <a class="link" href="/portfolio">Read More</a>
                     </div>
                 </div>
             </div>
@@ -129,7 +134,5 @@
         }
     })
 
-    displayIntroMessage(document.getElementById("intro-text"),"_", "Hi,\n", "I'm Lucas Villarroel").then(() => {
-        textMarker(document.getElementById("intro-text"))
-    })
+    displayIntroMessage(document.getElementById("intro-text"), "Hi, ", "I'm Lucas Villarroel")
 </script>

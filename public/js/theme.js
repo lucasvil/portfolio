@@ -3,11 +3,11 @@ const setTheme = (mode, themeLink)=>{
         case 'dark':
             themeLink.setAttribute('href', '/css/dark.css')
             break;
-        case 'purple':
-            themeLink.setAttribute('href', '/css/purple.css')
+        case 'light':
+            themeLink.href = '/css/light.css'
             break;
         default:
-            themeLink.setAttribute('href', '')
+            themeLink.href = '/css/dark.css'
             break;
     }
     localStorage.setItem('theme', mode)

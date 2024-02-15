@@ -1,38 +1,25 @@
 const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
 
-const displayIntroMessage = async (introTextNode, marker, t1, t2) => {
+const displayIntroMessage = async (introTextNode, t1, t2) => {
     if(!introTextNode) return
 
-    let cText = marker
+    let cText = ""
     
     for(const c of t1){
         await sleep(100)
-        cText = cText.substring(0, cText.length-1) + c + cText.substring(cText.length-1);
+        cText = cText+c;
         introTextNode.innerText = cText
     }
     await sleep(500)
     for(const c of t2){
         await sleep(100)
-        cText = cText.substring(0, cText.length-1) + c + cText.substring(cText.length-1);
+        cText = cText+c;
         introTextNode.innerText = cText
-    }
-}
-
-const textMarker = async (introTextNode) => {
-    while(true){
-        let cText = introTextNode.innerText
-        let lastChar = cText.charAt(cText.length-1)
-        if(lastChar == '_'){
-            introTextNode.innerText = cText.substring(0, cText.length-1) + '\xa0\xa0';
-        }else{
-            introTextNode.innerText = cText.substring(0, cText.length-2) + '_';
-        }
-        await sleep(500)
     }
 }
 
 try{
     module.exports = {
-        displayIntroMessage, textMarker, sleep
+        displayIntroMessage, sleep
     }
 }catch(error) {}
