@@ -1,8 +1,9 @@
 const fs = require('fs');
 const http = require('http');
 const https = require('https');
-const express = require('express')
+const express = require('express');
 const { engine } =require('express-handlebars');
+const { routes } = require('./routes');
 
 const app = express()
 
@@ -14,22 +15,7 @@ app.set('views', './views');
 
 app.use(express.static('public'))
 
-app.get('/', (req, res) => {
-  res.render('home')
-})
-
-app.get('/lsp', (req, res) => {
-  res.render('lsp')
-})
-
-app.get('/houseplant', (req, res) => {
-  res.render('houseplant')
-})
-
-app.get('/portfolio', (req, res) => {
-  res.render('portfolio')
-})
-
+app.use('/', routes)
 
 const httpServer = http.createServer(app);
 httpServer.listen(3000)
