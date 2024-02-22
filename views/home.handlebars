@@ -1,25 +1,7 @@
 <section class="s1">
     <div class="main-container">
         <div class="intro-wrapper">
-            <div class="nav-wrapper">
-                <div id="nav-term-left">
-                        <div class="dots-wrapper">
-                        <div id="dot-1" class="browser-dot"></div>
-                        <div id="dot-2" class="browser-dot"></div>
-                        <div id="dot-3" class="browser-dot"></div>
-                    </div>
-                </div>
-                <div id="nav-term-mid">
-                    <p>lucasvil@portfolio:~</p>
-                </div>
-                <div id="nav-term-right">
-                    <div class="dots-wrapper">
-                        <div id="dot-1" class="browser-dot"><i class="fa-solid fa-minus fa-xs"></i></div>
-                        <div id="dot-2" class="browser-dot"><i class="fa-regular fa-square dot-icon fa-sm"></i></div>
-                        <div id="dot-3" class="browser-dot"><i class="fa-solid fa-xmark dot-icon"></i></div>
-                    </div>
-                </div>
-            </div>
+            {{> nav}}
             <div class="left-col">
                 <img id="profile-pic" src="./img/lucas_circle_b.png" alt="">
                 <div id="theme-options-wrapper">
@@ -44,29 +26,32 @@
             <div class="about-me">
                 <h4>About me</h4>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec libero purus, tempus et felis quis,
-                    ornare imperdiet est. Fusce cursus, quam eget rutrum suscipit, mi ante lobortis nisi, ut blandit
-                    ante lacus tempus metus. Etiam mauris tortor, venenatis a elit non, small test. </p>
+                <p>
+                    Currently pursuing a Master's degree in Computer Science. 
+                    With a strong academic background in computer science/engingeering and an eagerness to learn more, I look forward to contributing to new and interesting projects.
+                </p>
 
-                <p>Etiam nec massa est. Etiam convallis est leo, eget vulputate erat placerat at. Nam ac ante tempor,
-                    bibendum nibh sit amet, interdum turpis. Aenean nec pretium ipsum, vestibulum feugiat justo. Fusce
-                    semper orci vitae leo blandit, ut viverra nibh convallis. In varius metus in mollis finibus. </p>
+                <p>
+                    Actively searching for a good team environment to apply and improve my skills in.
+                </p>
             </div>
             <div class="about-skills">
                 <h4>Skills</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>The tools and programming languages I'm most familiar are:</p>
                 <div id="skills">
                     <ul>
                         <li>Java</li>
-                        <li>Python</li>
                         <li>JavaScript</li>
-                        <li>SQL</li>
+                        <li>C</li>
+                        <li>Python</li>
+                        <li>HTML/CSS</li>
                     </ul>
                     <ul>
-                        <li>Java</li>
-                        <li>Python</li>
-                        <li>JavaScript</li>
-                        <li>SQL</li>
+                        <li>git</li>
+                        <li>AWS</li>
+                        <li>Postgres</li>
+                        <li>docker</li>
+                        <li>bash</li>
                     </ul>
                 </div>
             </div>
@@ -76,44 +61,17 @@
 
 <section class="s1">
     <div class="main-container">
-        <h3 style="text-align: center;">Some of my past projects</h3>
+        <h3 style="text-align: center;">Some past projects</h3>
         <div class="post-wrapper">
-
-            <div>
-                <div class="post">
-                    <img class="thumbnail" src="./img/rpi.jpg">
-                    <div class="post-preview">
-                        <h6 class="post-title">Houseplant Monitoring System</h6>
-                        <p class="post-intro">A houseplant monitoring system consisting of a Raspberry Pi, sensors and a
-                            web interface.</p>
-                        <a class="link" href="/houseplant">Read More</a>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div class="post">
-                    <img class="thumbnail" src="./img/lsp.png">
-                    <div class="post-preview">
-                        <h6 class="post-title">Development Environment for the Meta Attack Language (MAL)</h6>
-                        <p class="post-intro">A Language Server using the Language Server Protocol (LSP) coupled with a
-                            VSCode extension.</p>
-                        <a class="link" href="/lsp">Read More</a>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div class="post">
-                    <img class="thumbnail" src="./img/portfolio.jpg">
-                    <div class="post-preview">
-                        <h6 class="post-title">This Website</h6>
-                        <p class="post-intro">Frontend developed using pure JavaScript with an ExpressJS backend.
-                            Deployed using AWS Elastic Compute Cloud (ec2).</p>
-                        <a class="link" href="/portfolio">Read More</a>
-                    </div>
-                </div>
-            </div>
+            {{> post img="./img/rpi.jpg" link="/houseplant" title="Houseplant Monitoring System"
+                intro="A houseplant monitoring system usinng Raspberry Pi, soil moisture sensors and a web interface for visualization."
+            }}
+            {{> post img="./img/lsp.png" link="/lsp" title="Development Environment for the Meta Attack Language (MAL)"
+                intro="A Language Server using the Language Server Protocol (LSP) coupled with a VSCode extension."
+            }}
+            {{> post img="./img/portfolio.jpg" link="/portfolio" title="This Website"
+                intro="Frontend in JavaScript with an ExpressJS backend. Deployed with ci/cd pipeline using AWS EC2 and CodePipeline."
+            }}
         </div>
     </div>
 </section>
