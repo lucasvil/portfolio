@@ -23,7 +23,8 @@ router.get('/lsp', (req, res) => {
 router.get('/houseplant', (req, res) => {
   technologies= [
     "Raspberry Pi", 
-    "Python", 
+    "Python",
+    "CircuitPython",
     "MQTT", 
     "WebSockets", 
     "MongoDB"]
