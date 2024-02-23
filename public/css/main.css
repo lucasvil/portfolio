@@ -163,7 +163,7 @@ h6{ font-size: 16px;}
 
 
 .settings-note{
-    font-size: 18px;
+    font-size: 14px;
     font-style: italic;
     text-align: center;
     line-height: 0;
@@ -232,10 +232,10 @@ h6{ font-size: 16px;}
 }
 
 .technologies-wrapper{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    display: flex;
     padding-top: 50px;
     padding-bottom: 50px;
+    justify-content: space-evenly;
 }
 
 
@@ -250,7 +250,7 @@ h6{ font-size: 16px;}
     padding-right: 10px;
 }
 
-#skills{
+.note{
     display: flex;
     border-radius: 5px;
     justify-content: space-evenly;
@@ -300,7 +300,12 @@ h6{ font-size: 16px;}
     width: 50%;
     height: 200px;
     display: block;
-    object-fit: cover;
+}
+
+.project-img{
+    width: auto;
+    height: 260px;
+    margin: 30px;
 }
 
 #contact-form{
