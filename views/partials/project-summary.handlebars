@@ -2,21 +2,21 @@
     <div class="main-container">
         <div class="technologies-wrapper">
             <div class="technologies-left">
-
-                <h5><i class="fa-solid fa-microchip"></i> Technologies:</h5>
-                <ul>
-                    {{#each technologies}}
-                    <li>- {{this}}</li>
-                    {{/each}}
-                </ul>
+                <div >
+                    <h5><i class="fa-solid fa-microchip"></i> Technologies:</h5>
+                    <ul>
+                        {{#each technologies}}
+                        <li>- {{this}}</li>
+                        {{/each}}
+                    </ul>
+                </div>
             </div>
             <div class="technologies-right">
-                <h5><i class="fa-solid fa-code"></i> Check out the source code:</h5>
+                <h5><i class="fa-solid fa-code"></i> Source code:</h5>
                 {{#each repos}}
                 <a class="link" href="{{this.url}}">{{this.name}}</a>
                 <br>
                 {{/each}}
-            
             </div>
         </div>
     </div>
