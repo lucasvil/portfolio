@@ -17,14 +17,19 @@
             I'm currently hosting a server on an Amazon EC2 instance. 
             To manage and keep the server processes running smoothly, I'm using PM2, a process manager for Node.js applications. 
             <br>
+            <img src="img/pm2.png" style="height: 100px" class="project-img">
             <br>
             I've also connected an AWS CodePipeline to the Github repository.
             The pipeline is triggered on commits to the main branch. It uses CodeBuild for testing and CodeDeploy for deploying the application.
             <br>
             <img src="img/aws-pipeline.png" style="height: 100px" class="project-img">
             <br>
-            TLS certificates from certificate authorities can be pricey... but they can also be free. For this I've used Certbot
+            I acquired a domain and pointed it to the elastic IP of my EC2 instance. To ensure secure communication with my server, I needed a TLS certificate.
+            TLS certificates from certificate authorities can be pricey... but they can also be free. Therefore I used Certbot
             to generate a free TLS certificate from Let's Encrypt.
+            <br>
+            <img src="img/tls.png" style="height: 100px" class="project-img">
+            <br>
             </p>
         </div>
     </div>
