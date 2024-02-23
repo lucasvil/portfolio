@@ -7,19 +7,24 @@
             <h3>Portfolio</h3>
 
             <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            The purpose of this website is to showcase some of my past projects. I could've used a content management system
+            which would have been easy (but boring).
             <br>
             <br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet vulputate libero, eu egestas dui. 
-            Praesent viverra sit amet justo ut aliquam. Suspendisse potenti. Suspendisse finibus magna leo, sed posuere nunc maximus sit amet. 
+            This web application written in JavaScript, HTML and CSS. For the backend I used ExpressJS and Handlebars.
             <br>
             <br>
-           Quisque ac porttitor dui, et ullamcorper nibh. Aenean auctor leo nisi, at tincidunt justo pharetra ut. 
-           Donec suscipit nunc sit amet viverra malesuada. Maecenas finibus sem ac elit iaculis, non posuere libero aliquam. Sed sed sem eget enim porta cursus sit amet a libero. Morbi sit amet diam vel orci pharetra sodales quis eleifend lectus.
+            I'm currently hosting a server on an Amazon EC2 instance. 
+            To manage and keep the server processes running smoothly, I'm using PM2, a process manager for Node.js applications. 
             <br>
             <br>
-            Aenean semper, sem at condimentum rhoncus, ipsum purus tempus lectus, vel dictum arcu purus in quam. Sed non quam et orci dapibus commodo. 
-            Vivamus nec sapien nec turpis fringilla tincidunt.
+            I've also connected an AWS CodePipeline to the Github repository.
+            The pipeline is triggered on commits to the main branch. It uses CodeBuild for testing and CodeDeploy for deploying the application.
+            <br>
+            <img src="img/aws-pipeline.png" style="height: 100px" class="project-img">
+            <br>
+            TLS certificates from certificate authorities can be pricey... but they can also be free. For this I've used Certbot
+            to generate a free TLS certificate from Let's Encrypt.
             </p>
         </div>
     </div>
