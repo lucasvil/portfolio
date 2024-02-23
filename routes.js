@@ -42,7 +42,8 @@ router.get('/portfolio', (req, res) => {
     "ExpressJS", 
     "AWS Elastic Cloud Compute", 
     "AWS CodePipeline (Github -> CodeBuild -> CodeDeploy)", 
-    "TLS (Let's Encrypt)"]
+    "Certbot (TLS)",
+    "PM2"]
   repos= [
     {url: 'https://github.com/lucasvil/portfolio', name: 'Source Code'},
   ]
