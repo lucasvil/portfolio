@@ -1,4 +1,4 @@
-const setTheme = (mode, themeLink)=>{
+const setTheme = (mode, themeLink) => {
     switch (mode) {
         case 'dark':
             themeLink.setAttribute('href', '/css/dark.css')
@@ -13,8 +13,8 @@ const setTheme = (mode, themeLink)=>{
     localStorage.setItem('theme', mode)
 }
 
-try{
+try {
     module.exports = {
         setTheme
     }
-}catch(e) {}
+} catch (e) { }

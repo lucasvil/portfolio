@@ -1,4 +1,4 @@
-const {displayIntroMessage} = require('../public/js/intro');
+const { displayIntroMessage } = require('../public/js/intro');
 
 
 describe('displayIntroMessage function', () => {
@@ -22,7 +22,7 @@ describe('displayIntroMessage function', () => {
 
         introTextNode.innerText = ''
 
-        await displayIntroMessage(introTextNode,  t1, t2);
+        await displayIntroMessage(introTextNode, t1, t2);
 
         expect(introTextNode.innerText).toBe(t1 + t2);
     });

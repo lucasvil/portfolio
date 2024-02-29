@@ -27,8 +27,9 @@
                 <h4>About me</h4>
 
                 <p>
-                    Currently pursuing a Master's degree in Computer Science. 
-                    With a strong academic background in computer science/engingeering, I look forward to contributing to new and interesting projects.
+                    Currently pursuing a Master's degree in Computer Science.
+                    With a strong academic background in computer science/engingeering, I look forward to contributing
+                    to new and interesting projects.
                 </p>
 
                 <p>
@@ -48,8 +49,7 @@
                     </ul>
                     <ul>
                         <li>git</li>
-                        <li>AWS</li>
-                        <li>Postgres</li>
+                        <li>SQL</li>
                         <li>docker</li>
                         <li>bash</li>
                     </ul>
@@ -64,13 +64,15 @@
         <h3 style="text-align: center;">Some past projects</h3>
         <div class="post-wrapper">
             {{> post img="./img/dashboard.PNG" link="/houseplant" title="Houseplant Monitoring System"
-                intro="A houseplant monitoring system usinng Raspberry Pi, soil and light sensors and a web interface for visualization."
+            intro="A houseplant monitoring system usinng Raspberry Pi, soil and light sensors and a web interface for
+            visualization."
             }}
             {{> post img="./img/lsp.png" link="/lsp" title="Development Environment for the Meta Attack Language (MAL)"
-                intro="A Language Server using the Language Server Protocol (LSP) coupled with a VSCode extension."
+            intro="A Language Server using the Language Server Protocol (LSP) coupled with a VSCode extension."
             }}
             {{> post img="./img/portfolio.jpg" link="/portfolio" title="This Website"
-                intro="Frontend in JavaScript with an ExpressJS backend. Deployed with ci/cd pipeline using AWS EC2 and CodePipeline."
+            intro="Frontend in JavaScript with an ExpressJS backend. Deployed with ci/cd pipeline using AWS EC2 and
+            CodePipeline."
             }}
         </div>
     </div>
@@ -79,16 +81,16 @@
 <script src="/js/intro.js"></script>
 <script src="/js/theme.js"></script>
 <script>
-    for(let themeDot of document.getElementsByClassName("theme-dot")){
-        themeDot.addEventListener('click', function(){
+    for (let themeDot of document.getElementsByClassName("theme-dot")) {
+        themeDot.addEventListener('click', function () {
             let mode = this.dataset.mode;
             setTheme(mode, document.getElementById("theme-style"));
         })
     }
 
     window.addEventListener('load', (e) => {
-    for(let el of document.querySelectorAll('body *')){
-        el.style = "transition: 0.3s"
+        for (let el of document.querySelectorAll('body *')) {
+            el.style = "transition: 0.3s"
         }
     })
 

@@ -1,15 +1,15 @@
-:root{
-    --maincolor:#eaeaea;
-    --secondarycolor:#fefefe;
+:root {
+    --maincolor: #eaeaea;
+    --secondarycolor: #fefefe;
 
-    --mainText:black;
-    --secondaryText:#4b5156;
+    --mainText: black;
+    --secondaryText: #4b5156;
 
-    --border:#c1c1c1;
+    --border: #c1c1c1;
     --link: #17a2b8;
 
     --themeDotBorder: #24292e;
-    --note:#f0ead6;
+    --note: #f0ead6;
 
-    --buttonColor:black;
+    --buttonColor: black;
 }
