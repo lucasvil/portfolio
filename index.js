@@ -18,12 +18,12 @@ app.use(express.static('public'))
 app.use('/', routes)
 
 const httpServer = http.createServer(app);
-httpServer.listen(3000)
+httpServer.listen(process.env.HTTP_PORT);
 
 if (process.env.NODE_ENV != 'dev') {
-  const certificate = fs.readFileSync('/etc/letsencrypt/live/lucasvillarroel.dev/fullchain.pem', 'utf8');
-  const privateKey = fs.readFileSync('/etc/letsencrypt/live/lucasvillarroel.dev/privkey.pem', 'utf8');
+  const certificate = fs.readFileSync(`/etc/letsencrypt/live/${process.env.DOMAIN_NAME}/fullchain.pem?`, 'utf8');
+  const privateKey = fs.readFileSync(`/etc/letsencrypt/live/${process.env.DOMAIN_NAME}/privkey.pem`, 'utf8');
 
   const httpsServer = https.createServer({ key: privateKey, cert: certificate }, app);
-  httpsServer.listen(3443)
+  httpsServer.listen(process.env.HTTPS_PORT)
 }
